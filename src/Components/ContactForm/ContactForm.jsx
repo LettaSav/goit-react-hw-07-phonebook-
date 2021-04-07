@@ -3,6 +3,7 @@ import useStyles from './useStyles';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { getContacts } from '../../redux/contacts-selectors';
+import { addContact } from '../../redux/contacts-operations';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -57,7 +58,7 @@ const ContactForm = () => {
     } else if (checkSpelling(number)) {
       alert('Enter valid telephone number');
     } else {
-      dispatch(getContacts(name, number));
+      dispatch(addContact(name, number));
     }
     ResetFields();
   };
