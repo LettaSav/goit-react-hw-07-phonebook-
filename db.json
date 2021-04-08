@@ -1,5 +1,3 @@
-
-
 {
   "contacts": [
     {
@@ -7,13 +5,11 @@
       "number": "222-44-333-55",
       "id": 1
     },
-
     {
       "name": "Chloe Bell",
       "number": "323-54-678-98",
-      "id":2
+      "id": 2
     },
-
     {
       "name": "Jessica Bloom",
       "number": "543-66-789-00",
@@ -23,7 +19,11 @@
       "name": "Karl Lee",
       "number": "122-33-456-33",
       "id": 4
+    },
+    {
+      "id": "c3e73ec6-786f-43b6-9ef9-9daf389be740",
+      "name": "Wetta",
+      "number": "1111111111"
     }
-
   ]
 }
