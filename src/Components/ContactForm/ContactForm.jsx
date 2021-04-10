@@ -38,9 +38,6 @@ const ContactForm = () => {
   const checkEmptyBars = (name, number) => {
     return name === '' || number === '';
   };
-  const checkSpelling = number => {
-    return !/\d{3}\d{2}\d{3}\d{2}/g.test(number);
-  };
 
   const ResetFields = () => {
     setName('');
@@ -55,8 +52,6 @@ const ContactForm = () => {
       alert(` ${number} is already in contacts!`);
     } else if (checkEmptyBars(name, number)) {
       alert(`Enter Name and Number in order to add contact`);
-    } else if (checkSpelling(number)) {
-      alert('Enter valid telephone number');
     } else {
       dispatch(addContact(name, number));
     }
@@ -70,7 +65,6 @@ const ContactForm = () => {
         className={classes.contacts_input}
         name="name"
         type="text"
-        placeholder="John Smith"
         value={name}
         onChange={handleInputChange}
       ></input>
@@ -79,7 +73,6 @@ const ContactForm = () => {
         className={classes.contacts_input}
         name="number"
         type="tel"
-        placeholder="111-11-111-11"
         value={number}
         onChange={handleInputChange}
       ></input>
